@@ -8,13 +8,13 @@ declare module '@dorafactory/circomlib' {
 		find(key: Uint8Array | string): Promise<any>;
 	}
 
-	export const smt: any;
-	export const eddsa: any;
-	export const mimc7: {
+	const smt: any;
+	const eddsa: any;
+	const mimc7: {
 		hash(x: string | number, k?: string): string;
 		multiHash(arr: (string | number)[], k?: string): string;
 	};
-	export const mimcsponge: {
+	const mimcsponge: {
 		hash(
 			xL: string | number,
 			xR: string | number,
@@ -22,14 +22,31 @@ declare module '@dorafactory/circomlib' {
 		): [string, string];
 		multiHash(arr: (string | number)[], key?: string): [string, string];
 	};
-	export const babyJub: any;
-	export const pedersenHash: any;
-	export const SMT: any;
-	export const SMTMemDB: any;
-	export const poseidon: any;
-	export const poseidonPerm: any;
-	export const poseidonEncrypt: any;
-	export const poseidonDecrypt: any;
+	const babyJub: any;
+	const pedersenHash: any;
+	const SMT: any;
+	const SMTMemDB: any;
+	const poseidon: any;
+	const poseidonPerm: any;
+	const poseidonEncrypt: any;
+	const poseidonDecrypt: any;
+	const Tree: any;
+
+	export {
+		smt,
+		eddsa,
+		mimc7,
+		mimcsponge,
+		babyJub,
+		pedersenHash,
+		SMT,
+		SMTMemDB,
+		poseidon,
+		poseidonPerm,
+		poseidonEncrypt,
+		poseidonDecrypt,
+		Tree,
+	};
 }
 
 declare module 'ffjavascript' {
